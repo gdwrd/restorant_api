@@ -1,9 +1,8 @@
 class Order < ActiveRecord::Base
-  belongs_to :restorant
+  belongs_to :restorant, autosave: true
 
   validates :restorant_id, presence: true
   validates :datetime, presence: true
   validates :quantity, presence: true
-  validates :name, presence: true, if: "email.nil?"
-  validates :email, presence: true, if: "name.nil?"
+  validates :name, :phone, presence: true, if: Proc.new { |o| o.name.nil? || o.phone.nil? }
 end
