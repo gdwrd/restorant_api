@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20160401153840) do
   create_table "restorants", primary_key: "restorant_id", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
-    t.decimal  "longitude"
-    t.decimal  "latitude"
+    t.float    "longitude"
+    t.float    "latitude"
     t.float    "averagesum"
     t.string   "worktime"
     t.string   "phone"

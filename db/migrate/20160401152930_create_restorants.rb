@@ -4,8 +4,8 @@ class CreateRestorants < ActiveRecord::Migration
       t.primary_key :restorant_id
       t.string      :name
       t.string      :address
-      t.decimal     :longitude
-      t.decimal     :latitude
+      t.float       :longitude
+      t.float       :latitude
       t.float       :averagesum
       t.string      :worktime
       t.string      :phone

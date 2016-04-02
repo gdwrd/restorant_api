@@ -7,6 +7,7 @@ gem 'sinatra', '~> 1.4.7'
 gem 'sinatra-activerecord', '~> 2.0.9'
 gem 'unicorn', '~> 5.1.0'
 gem 'json', '~> 1.8.3'
+gem 'geocoder', '~> 1.3.2'
 gem 'pg', '~> 0.18.4'
 
 group :development, :test do
