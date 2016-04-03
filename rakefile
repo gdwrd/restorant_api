@@ -1,5 +1,5 @@
 require 'rspec/core/rake_task'
-require './app'
+require './app/controllers/api_controller'
 require 'sinatra/activerecord/rake'
 
 RSpec::Core::RakeTask.new :specs do |task|

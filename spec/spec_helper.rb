@@ -1,14 +1,18 @@
 ENV['RACK_ENV'] = 'test'
 
+require 'simplecov'
+SimpleCov.start
+
 require 'factory_girl'
 
 require_relative 'support/factory_girl'
-require_relative File.join('..', 'app')
+Dir.glob('./app/{controllers}/*.rb').each { |file| require file }
 
 RSpec.configure do |config|
   include Rack::Test::Methods
 
   def app
-    RestorantApi
+    ApiController
+    RestorantsController
   end
 end
