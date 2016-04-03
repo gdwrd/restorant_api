@@ -1,5 +1,5 @@
 require 'rspec/core/rake_task'
-require './app/controllers/api_controller'
+Dir.glob('./app/{controllers}/*.rb').each { |file| require file }
 require 'sinatra/activerecord/rake'
 
 RSpec::Core::RakeTask.new :specs do |task|

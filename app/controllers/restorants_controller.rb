@@ -27,12 +27,4 @@ class RestorantsController < ApiController
     keys = atmosfere ? KEYS_WITH_ATMOSFERE : KEYS
     params.fetch_values(*keys)
   end
-
-  def return_response data
-    { status: 'success', restorants: data }.to_json
-  end
-
-  def return_error error
-    halt 404, { status: 'error', error: error }.to_json
-  end
 end
