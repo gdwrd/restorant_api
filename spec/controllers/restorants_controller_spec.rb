@@ -32,8 +32,16 @@ RSpec.describe RestorantsController do
     end
   end
 
+  describe 'GET /api/restorants/near with invalid positions' do
+    before { get '/near?longitude=200.4&latitude=90' }
+
+    it 'status should be 404' do
+      expect(last_response.status).to eq(404)
+    end
+  end
+
   describe 'GET /api/restorant/near_by with invalid params' do
-    before { get '/near_by?longitude=100&latitude=50' }
+    before { get '/near_by?longitude=100.5&latitude=50.45' }
 
     it 'status should be 404' do
       expect(last_response.status).to eq(404)

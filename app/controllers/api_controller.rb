@@ -16,6 +16,8 @@ require_relative '../models/restorant'
 require_relative '../models/atmosfere'
 require_relative '../models/order'
 
+require_relative '../helpers/string_helper'
+
 class ApiController < Sinatra::Base
   register Sinatra::Namespace
 
