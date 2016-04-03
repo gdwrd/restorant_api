@@ -12,8 +12,6 @@ RSpec.configure do |config|
   include Rack::Test::Methods
 
   def app
-    ApiController
-    AtmosferesController
-    RestorantsController
+    described_class
   end
 end

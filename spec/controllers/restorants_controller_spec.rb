@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-describe 'Restorant Controller' do
+RSpec.describe RestorantsController do
 
   describe 'GET /api/restorants/near with invalid params' do
     before { get '/near' }

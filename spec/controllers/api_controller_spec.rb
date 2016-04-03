@@ -1,6 +1,6 @@
 require_relative '../spec_helper'
 
-describe 'Api Controller' do
+RSpec.describe ApiController do
   describe 'GET /api/' do
     it 'status should be 200' do
       get '/api/'

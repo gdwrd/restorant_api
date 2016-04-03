@@ -1,6 +1,6 @@
 require_relative '../../app/controllers/atmosferes_controller'
 
-describe 'Atmosferes Controller' do
+RSpec.describe AtmosferesController do
 
   describe 'GET /api/atmosfere' do
     before { get '/' }
