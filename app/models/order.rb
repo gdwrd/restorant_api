@@ -4,5 +4,5 @@ class Order < ActiveRecord::Base
   validates :restorant_id, presence: true
   validates :datetime, presence: true
   validates :quantity, presence: true
-  validates :name, :phone, presence: true, if: Proc.new { |o| o.name.nil? || o.phone.nil? }
+  validates :email, :phone, presence: true, if: Proc.new { |o| o.email.nil? && o.phone.nil? }
 end

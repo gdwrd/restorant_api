@@ -1,6 +1,6 @@
 class RestorantsController < ApiController
-  KEYS = ['latitude', 'longitude']
-  KEYS_WITH_ATMOSFERE = ['latitude', 'longitude', 'atmosfere_ids']
+  KEYS = %w(latitude longitude)
+  KEYS_WITH_ATMOSFERE = %w(latitude longitude atmosfere_ids)
 
   get '/near' do
     content_type :json
