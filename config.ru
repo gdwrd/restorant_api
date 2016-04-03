@@ -1,6 +1,7 @@
 require 'sinatra/base'
 
-Dir.glob('./app/{helpers,controllers}/*.rb').each { |file| require file }
+Dir.glob('./app/{controllers}/*.rb').each { |file| require file }
 
 map('/') { run ApiController }
-map('/api/restorants/') { run RestorantsController }
+map('/api/atmosfere') { run AtmosferesController }
+map('/api/restorants') { run RestorantsController }

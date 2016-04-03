@@ -13,6 +13,7 @@ RSpec.configure do |config|
 
   def app
     ApiController
+    AtmosferesController
     RestorantsController
   end
 end
